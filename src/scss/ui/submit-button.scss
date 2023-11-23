@@ -1,0 +1,32 @@
+.submit-button {
+	transition: all 0.3s ease;
+	margin-left: auto;
+	margin-right: 32px;
+	display: block;
+	border: none;
+	border-radius: 16px;
+	width: 136px;
+	height: 32px;
+	padding-left: 20px;
+
+	color: $bg-color;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 24px;
+	letter-spacing: -0.15px;
+	text-transform: uppercase;
+	text-align: start;
+
+	background-color: $color-secondary;
+	background-image: url('../img/ic-goside.svg');
+	background-repeat: no-repeat;
+	background-position: 100px;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $bg-color;
+		border: 1px solid $color-secondary;
+		color: $color-secondary;
+		transform: scale(1.1); 
+	}
+}

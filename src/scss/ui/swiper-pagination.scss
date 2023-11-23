@@ -1,0 +1,16 @@
+.swiper-pagination {
+	position: static;
+	justify-content: center;
+
+	&-bullet {
+		background: #DDDDDD;
+		width: 12px;
+		height: 12px;
+
+		&-active {
+			background: $gray-light;
+			width: 12px;
+			height: 12px;
+		}
+	}
+}

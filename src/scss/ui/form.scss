@@ -1,0 +1,33 @@
+.form {
+	padding-bottom: 30px;
+	position: fixed;
+	z-index: 200;
+	top: 0;
+	right: 0;
+	transform: translateX(550px);
+	transition: all 0.3s ease;
+	width: 100%;
+	max-width: 360px;
+	height: 100%;
+	overflow: auto;
+	background: white;
+	box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+	border-left: 1px solid #D9FFF5 outset;
+
+	@media (min-width: $screen-md) {
+		width: 320px;
+	}
+
+	@media (min-width: $screen-xl) {
+		width: 440px;
+		overflow: visible;
+	}
+	
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&--opened {
+		transform: translate(0);
+	}
+}

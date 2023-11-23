@@ -1,0 +1,25 @@
+@import './utils/variables.scss';
+@import './utils/fonts.scss';
+@import './utils/global.scss';
+@import './utils/mixins.scss';
+
+@import './ui/agreement.scss';
+@import './ui/submit-button.scss';
+@import './ui/form.scss';
+@import './ui/block-title.scss';
+@import './ui/swiper-pagination.scss';
+@import './ui/text.scss';
+
+@import './modules/heading.scss';
+@import './modules/slide-menu.scss';
+@import './modules/slide.scss';
+@import './modules/brands.scss';
+@import './modules/devices.scss';
+@import './modules/prices.scss';
+@import './modules/feedback.scss';
+@import './modules/call.scss';
+
+@import './layout/content.scss';
+@import './layout/menu.scss';
+@import './layout/sidebar.scss';
+@import './layout/footer.scss';

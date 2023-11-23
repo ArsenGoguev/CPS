@@ -1,0 +1,64 @@
+.slide-menu {
+	height: auto;
+
+	&__slide-list {
+		height: auto;	
+		display: flex;
+		list-style: none;
+		overflow-y: scroll;
+		padding-left: 16px;
+
+		@media (min-width: $screen-md) {
+			padding-left: 24px;
+		}
+
+		@media (min-width: $screen-xl) {
+			padding: 0 32px;
+			flex-wrap: wrap;
+			height: auto;
+			align-items: center;
+			padding-top: 10px;
+		}
+
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 8px 17px;
+		text-decoration: none;
+		color: $gray;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+
+		@media (min-width: $screen-xl) {
+			transition: all 0.3s ease;
+			display: block;
+
+			&:hover {
+				color:#00d39b;
+			}
+		}
+
+		&--active {
+			border-radius: 6px;
+			border: 2px solid $color-border;
+			background: white;
+			transition: none;
+	
+			&:hover {
+				color: $gray;
+			}
+		}
+	}
+
+	&__item {
+		padding: 0;
+		white-space: nowrap;
+	}
+}

@@ -1,0 +1,65 @@
+.heading {
+	margin-top: 24px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+
+	@media (min-width: $screen-md) {
+		margin-bottom: 32px;
+	}
+
+	@media (min-width: $screen-xl) {
+		margin: 42px 32px 8px 0;
+		justify-content: space-between;
+
+		&__button {
+			display: block;
+			width: 174px;
+			height: 40px;
+			margin-left: 32px;
+			padding-top: 8px;
+
+			color: $color-text-main;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: -0.2px;
+			text-decoration: none;
+
+			background-repeat: no-repeat;
+			background-position: 132px 0;
+			transition: all 0.3s ease;
+
+			&:hover {
+				transform: scale(1.1);
+				color: $color-secondary;
+			}
+		}
+
+		&__button-repair {
+			background-image: url('../img/repair.svg');
+		}
+
+		&__button-status {
+			background-image: url('../img/checkstatus.svg');
+		}
+	}
+
+	&__title {
+		@include title (28px, 40px);
+
+		@media (min-width: $screen-md) {
+			padding-left: 24px;
+			padding-left: 32px;
+		}
+	}
+
+	&__menu {
+		display: none;
+
+		@media (min-width: $screen-xl) {
+			display: flex;
+		}
+	}
+}

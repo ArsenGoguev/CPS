@@ -1,0 +1,262 @@
+.prices {
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 40px;
+
+	@media (min-width: 720px) {
+		padding-bottom: 47px;
+	}
+
+	@media (min-width: 720px) {
+		padding-bottom: 47px;
+	}
+
+	&__header {
+		box-shadow: 0px 3px 3px -2px rgba(0, 255, 255, 0.5) inset;
+		padding: 16px;
+		background-color: $bg-color;
+		background: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
+
+		@media (min-width: $screen-md) {
+			padding-left: 24px;
+		}
+
+		@media (min-width: $screen-xl) {
+			padding-left: 32px;
+		}
+	}
+
+	&__title {
+		color: $gray;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px; /* 150% */
+		letter-spacing: -0.2px;
+		text-transform: uppercase;
+	}
+	
+	&__list {
+		display: block;
+
+		@media (min-width: $screen-md) {
+			display: table;
+			padding: 24px;
+			min-width: 100%;
+			border-spacing: 0 2px;
+		}
+
+		@media (min-width: $screen-xl) {
+			padding: 32px;
+		}
+	}
+
+	&__list-header {
+		display: none;
+
+		@media (min-width: $screen-md) {
+			display: table-row-group;
+		}
+	}
+
+	&__header-tr {
+		height: auto;
+	}
+
+	&__header-th {
+		color: $gray;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 16px; /* 114.286% */
+		opacity: 0.7218;
+		
+		@media (min-width: $screen-md) {
+			text-align: start;
+			padding: 8px 0 16px 16px;
+		}
+
+		@media (min-width: $screen-xl) {
+			padding-top: 0;
+			padding-left: 24px;
+		}
+	}
+
+	&__list-body {
+		padding-left: 16px;
+		display: flex;
+
+		@media (min-width: $screen-md) {
+			padding: 0;
+			display: table-row-group;
+			border-radius: 6px;
+			background-color: $bg-color;
+		}
+	}
+
+	&__list-tr {
+			background-color: $bg-color;
+			min-width: 260px;
+			height: 200px;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-areas: 'title title'
+													 'price price'
+													 'time button';
+			align-items: center;
+			padding: 16px;
+			border-radius: 6px;
+			gap: 16px;
+	
+		@media (min-width: $screen-md) {
+			display: table-row;
+			min-width: auto;
+			height: auto;
+			padding: 0;
+		}
+	}
+
+	&__list-td {
+			display: inline-block;
+		
+		@media (min-width: $screen-md) {
+			display: table-cell;
+			padding: 16px 0 16px 16px;
+
+			&:last-child {
+				text-align: right;
+				padding-right: 16px;
+			}
+		}
+
+		@media (min-width: $screen-xl) {
+			padding: 16px 24px 16px;
+		}
+	}
+
+	&__item-button {
+		justify-self: end;
+	}
+
+	&__item-title {
+		grid-area: title;
+
+		&::before {
+			@include slider-th ('Ремонтные услуги\0a');
+
+			@media (min-width: $screen-md) {
+				display: none;
+			}
+		}
+	}
+
+	&__item-price {
+		grid-area: price;
+
+		&::before {
+			@include slider-th ('Цена\0a');
+
+			@media (min-width: $screen-md) {
+				display: none;
+			}
+		}
+	}
+
+	&__item-time {
+		grid-area: time;
+
+		&::before {
+			@include slider-th ('Срок\0a');
+
+			@media (min-width: $screen-md) {
+				display: none;
+			}
+		}
+	}
+
+	&__button {
+		display: inline-flex;
+		padding: 4px 12px;
+		width: 119px;
+		height: 32px;
+		border-radius: 16px;
+		grid-area: button;
+
+		color: $bg-color;
+		text-transform: uppercase;
+		align-items: center;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 12px;
+
+		background-color: $color-secondary;
+		background-image: url('../img/ic-goside.svg');
+		background-repeat: no-repeat;
+		background-position: 87px;
+
+		@media (min-width: $screen-xl) {
+			transition: all 0.3s ease;
+
+			&:hover {
+				background-color: $bg-color;
+				border: 1px solid $color-secondary;
+				color: $color-secondary;
+			}
+		}
+	}
+
+	&__info {
+		padding: 0 16px;
+
+		@media (min-width: $screen-md) {
+			padding: 0 24px;
+		}
+
+		@media (min-width: $screen-xl) {
+			padding: 0 32px;
+		}
+	}
+
+	&__info-text {
+		max-width: 421px;
+	}
+
+	&__info-button {
+		width: 192px;
+		margin-top: 16px;
+		display: inline-block;
+		align-self: end;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 24px; /* 150% */
+		letter-spacing: -0.2px;
+		background-image: url('../img/ic-more.svg');
+		background-repeat: no-repeat;
+		background-position: 100px 22px;
+
+		@media (min-width: $screen-md) {
+			background-position: 290px;
+			width: 316px;
+		}
+
+		@media (min-width: $screen-xl) {
+			transition: all 0.3s ease;
+
+			&:hover {
+				text-decoration: underline;
+				transform: translateX(8px) scale(1.05);
+			}
+		}
+
+		&, &:visited {
+			text-decoration: none;
+			color: $color-text-main;
+		}
+	}
+
+	&__pagination {
+		margin: 16px 0;
+	}
+}

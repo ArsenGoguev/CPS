@@ -1,0 +1,67 @@
+.menu {
+	width: 100%;
+	background-color: $bg-color;
+	height: 88px;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0px 2px 5px 0px $color-border;
+
+	@media (min-width: $screen-xl) {
+		display: none;
+	}
+
+	&__link-list {
+		margin: 0;
+		padding: 16px;
+		list-style: none;
+		display: flex;
+		text-decoration: none;
+		align-items: center;
+		margin-left: -16px;
+	}
+
+	&__button {
+		width: 40px;
+		height: 40px;
+		margin-left: 16px;
+
+		&--changed-indentation {
+			margin-right: auto;
+
+			@media (min-width: $screen-md) {
+				margin-left: 20px;
+			}
+		}
+	}
+
+	&__logo {
+		margin-left: 16px;
+		width: 96.548px;
+		height: 50.815px;
+
+		@media (min-width: $screen-md) {
+				margin-left: 20px;
+		}
+	}
+	
+	&__divider {
+		width: 2px;
+		height: 32px;
+		border: none;
+		border-radius: 1px;
+		background: #EAEAEA;
+
+		@media (min-width: $screen-md) {
+			margin-left: 20px;
+			margin-right: 0;
+		}
+	}
+	
+	&__item--disable {
+		display: none;
+
+		@media (min-width: $screen-md) {
+			display: block;
+		}
+	}
+}

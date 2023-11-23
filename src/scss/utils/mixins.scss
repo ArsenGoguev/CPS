@@ -1,0 +1,74 @@
+@mixin background-image ($image, $position) {
+	background-image: $image;
+	background-position: $position;
+	background-repeat: no-repeat;
+}
+
+@mixin openMore {
+	color: $color-text-main;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	text-decoration: none;
+
+	padding-left: 34px;
+	display: inline-block;
+	background: url('../img/expand.svg') no-repeat;
+
+	@media (min-width: $screen-xl) {
+		transition: all 0.3s ease;
+
+		&:hover {
+			transform: translateX(10px) scale(1.07);
+		}
+	}
+
+	&:visited {
+		text-decoration: none;
+		color: $color-text-main;
+	}
+
+	&--hidden {
+		display: none;
+
+		@media (min-width: $screen-md) {
+			display: inline-block;
+		}
+	}
+}
+
+@mixin title ($fz, $lh) {
+	display: flex;
+	align-items: center;
+	padding-left: 16px;
+
+	color: $color-text-main;
+	font-size: $fz;
+	line-height: $lh;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: -0.6px;
+	background: url('../img/highlight.svg') no-repeat 0 0;
+}
+
+@mixin slider-th ($content) {
+	white-space: pre;
+	content: $content;
+	color: $gray;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px; /* 114.286% */
+	opacity: 0.7218;
+}
+
+@mixin placeholder {
+	color: $gray-light;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px; /* 150% */
+	letter-spacing: -0.2px;
+}

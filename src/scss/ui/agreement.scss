@@ -1,0 +1,26 @@
+.agreement {
+	padding: 16px 16px 22px;
+	color: $gray;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px; /* 114.286% */
+
+	@media (min-width: $screen-xl) {
+		padding: 16px 32px;
+	}
+
+	&__link {
+		color: $color-secondary;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 16px;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-secondary;
+			text-decoration: underline;
+		}
+	}
+}

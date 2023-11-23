@@ -1,0 +1,63 @@
+.footer {
+	border-top: 1px solid #D9FFF5;
+	padding: 0 10px 19px;
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: $screen-md) {
+		flex-direction: row;
+		padding: 32px 24px 25px;
+		justify-content: space-between;
+		height: 105px;
+	}
+
+	@media (min-width: $screen-xl) {
+		padding: 32px 32px 21px;
+	}
+
+	&__item {
+		color: $gray;
+		text-align: center;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 16px;
+		opacity: 0.7218;
+		margin-top: 16px;
+
+		@media (min-width: $screen-md) {
+			margin: 0;
+			min-width: 218px;
+			
+			&:first-child {
+				text-align: start;
+			}
+
+			&:last-child {
+				text-align: end;
+				max-width: 330px;
+			}
+		}
+	}
+
+	&__link {
+		transition: color 0.4s ease;
+		text-decoration: none;
+		max-width: 214px;
+		margin: 16px auto 0;
+
+		@media (min-width: $screen-md) {
+			align-self: flex-start;
+			margin: 0 35px;
+		}
+
+		&:hover {
+			color: $color-secondary !important;
+			text-decoration: underline;
+		}
+
+		&:visited {
+			color: $gray;
+		}
+	}
+}
